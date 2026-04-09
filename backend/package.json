@@ -1,0 +1,19 @@
+{
+  "name": "@stockpulse/backend",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node src/server.mjs",
+    "dev": "node --watch src/server.mjs",
+    "dev:api": "node src/server.mjs",
+    "test": "node --test tests/unit/*.test.mjs tests/integration/*.test.mjs tests/e2e/*.test.mjs",
+    "test:unit": "node --test tests/unit/*.test.mjs",
+    "test:integration": "node --test tests/integration/*.test.mjs",
+    "test:e2e": "node --test tests/e2e/*.test.mjs",
+    "db:migrate": "npx prisma migrate deploy",
+    "db:seed": "npx ts-node prisma/seed.ts"
+  },
+  "engines": {
+    "node": ">=18.18.0"
+  }
+}
